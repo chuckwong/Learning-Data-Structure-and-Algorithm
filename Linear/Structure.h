@@ -2,7 +2,9 @@
 // Created by JunhaoWang on 7/11/16.
 //
 
-// DEFINE
+// Define
+
+typedef int Status;
 
 #define OK 1
 #define ERROR 0

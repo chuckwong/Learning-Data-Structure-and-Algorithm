@@ -1,2 +1,3 @@
 # Learning-Data-Structure-and-Algorithm
-Notes
+
+学习笔记请看 [我的博客](http://chuckwo.com/)

@@ -31,3 +31,9 @@
 # Debug files
 *.dSYM/
 *.su
+.idea/Learning-Data-Structure-and-Algorithm.iml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
