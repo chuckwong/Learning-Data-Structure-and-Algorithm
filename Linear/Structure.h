@@ -44,6 +44,21 @@ typedef struct
     int cur;
 } Component, StaticLinkList[MAXSIZE];
 
+// DualLinkList
+typedef struct DualNode
+{
+    ElemType data;
+    struct DualNode *prior;
+    struct DualNode *next;
+} DualNode, *DualLinkList;
+
+// Stack
+typedef struct
+{
+    ElemType *base;
+    ElemType *top;
+    int stackSize;
+} sqStack;
 
 #endif
 
