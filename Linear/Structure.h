@@ -60,5 +60,20 @@ typedef struct
     int stackSize;
 } sqStack;
 
+// LinkStack
+
+typedef struct StackNode
+{
+    ElemType data;
+    struct StackNode *next;
+
+} StackNode, *LinkStackPtr;
+
+typedef struct LinkStack
+{
+    LinkStackPtr top;
+    int count;
+};
+
 #endif
 
