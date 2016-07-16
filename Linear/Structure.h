@@ -2,9 +2,14 @@
 // Created by JunhaoWang on 7/11/16.
 //
 
+#ifndef _INCLUDE_STRUCTURE_H_
+#define _INCLUDE_STRUCTURE_H_
+
+
 // Define
 
 typedef int Status;
+typedef int ElemType;
 
 #define OK 1
 #define ERROR 0
@@ -13,9 +18,7 @@ typedef int Status;
 
 // Sequence
 
-#define MAXSIZE 20
-
-typedef int ElemType;
+#define MAXSIZE 100
 
 typedef struct
 {
@@ -24,7 +27,7 @@ typedef struct
 } SqList;
 
 
-// Link
+// LinkList
 
 typedef struct Node
 {
@@ -33,4 +36,14 @@ typedef struct Node
 } Node;
 
 typedef struct Node *LinkList;
+
+// StaticLinkList
+typedef struct
+{
+    ElemType data;
+    int cur;
+} Component, StaticLinkList[MAXSIZE];
+
+
+#endif
 

@@ -3,6 +3,7 @@
 //
 
 #include "Structure.h"
+#include <time.h>
 
 //  GetElem
 Status GetElem(LinkList L, int i, ElemType *e)
@@ -137,4 +138,40 @@ Status ClearList(LinkList *L)
     (*L)->next = NULL;
 
     return OK;
+}
+
+// ListLength
+int ListLength(LinkList L)
+{
+    int j;
+
+    LinkList p;
+
+    j = 0;
+
+    p = L->next;
+
+    while (p) {
+        ++j;
+        p = p->next;
+    }
+
+    return j;
+}
+
+// ListDisplay
+void ListDisplay(LinkList L)
+{
+    if (L == NULL) {
+        return;
+    }
+
+    LinkList p = L->next;
+
+    while (p) {
+        printf("%d ", p->data);
+        p = p->next;
+    }
+
+    printf("\n");
 }

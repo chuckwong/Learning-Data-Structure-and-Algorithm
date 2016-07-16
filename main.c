@@ -4,13 +4,15 @@
 
 
 #include <stdio.h>
-#include "Linear/Structure.h"
+#include <stdlib.h>
+
+#include "Linear/Problem_GetMidNode2.c"
 
 int main(int argc, char *argv[])
 {
-    printf("haha\n");
+    printf("Hello World!\n");
 
-    
+    run_getMidNode2();
 
     return 0;
 }
