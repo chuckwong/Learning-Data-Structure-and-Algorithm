@@ -11,13 +11,17 @@
 
 #include "Linear/Problem_Bin2Dec.c"
 
+#include "String/kmp.c"
+
 int main(int argc, char *argv[])
 {
     printf("Hello World!\n");
 
 //    run_getMidNode2();
 
-    run_bin2Dec();
+//    run_bin2Dec();
+
+    get_next();
 
     return 0;
 }

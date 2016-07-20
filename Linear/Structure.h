@@ -75,5 +75,18 @@ typedef struct LinkStack
     int count;
 };
 
+// Queue
+
+typedef struct QNode
+{
+    ElemType data;
+    struct QNode *next;
+} QNode, *QueuePtr;
+
+typedef struct
+{
+    QueuePtr front, rear; // 队头、尾指针
+} LinkQueue;
+
 #endif
 
