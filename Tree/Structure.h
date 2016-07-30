@@ -47,11 +47,26 @@ typedef struct
     int r, n;
 };
 
+// BiTree
+
 typedef struct BiTNode
 {
     ElemType data;
     struct BitNode *lchild, *rchild;
 } BiTNode, *BiTree;
+
+
+// BiThrTree
+
+typedef enum {Link, Thread} PointerTag;
+
+typedef struct BiThrNode
+{
+    ElemType data;
+    struct BiThrNode *lchild, *rchild;
+    PointerTag ltag;
+    PointerTag rtag;
+} BiThrNode, *BiThrTree;
 
 
 #endif //LEARNING_DATA_STRUCTURE_AND_ALGORITHM_STRUCTURE_H
