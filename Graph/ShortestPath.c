@@ -8,7 +8,7 @@
 typedef int Patharc[MAXVEX]; // Index of SP (Shortest Path)
 typedef int ShortPathTable[MAXVEX]; // Sum of weight of each vertex
 
-void ShortestPath_Dijkatra(MGraph G, int V0, Patharc *P, ShortPathTable *D)
+void ShortestPath_Dijkstra(MGraph G, int V0, Patharc *P, ShortPathTable *D)
 {
     int v, w, k, min;
     int final[MAXVEX]; // final[w] = 1 means the shorest path (V0, Vw) is calculated
@@ -42,6 +42,7 @@ void ShortestPath_Dijkatra(MGraph G, int V0, Patharc *P, ShortPathTable *D)
         }
     }
 }
+
 
 
 
