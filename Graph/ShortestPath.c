@@ -43,6 +43,30 @@ void ShortestPath_Dijkstra(MGraph G, int V0, Patharc *P, ShortPathTable *D)
     }
 }
 
+void ShortestPath_Floyd(MGraph G, Pathatrix *P, ShortPathTable *D)
+{
+    int v, w, k;
+
+    // Init
+    for (v = 0; v < G.numVertexes; ++v) {
+        for (w = 0; w < G.numVertexes; ++w) {
+            (*D)[v][w] = G.matrix[v][w];
+            (*P)[v][w] = w;
+        }
+    }
+
+    for (k = 0; k < G.numVertexes; ++k) {
+        for (v = 0; v < G.numVertexes; ++v) {
+            for (w = 0; w < G.numVertexes; ++w) {
+                if ((*D)[v][w] > (*D)[v][k] + (*D)[k][w]) {
+                    (*D)[v][w] = (*D)[v][k] + (*D)[k][w];
+                    (*P)[v][w] = (*P)[v][k];
+                }
+            }
+        }
+    }
+
+}
 
 
 
